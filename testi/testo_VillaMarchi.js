@@ -1,0 +1,1 @@
+document.write('Il padiglione Vittorio Marchi, un grande edificio di oltre 7.800 metri quadrati, è stato parzialmente recuperato nel 2014 con la realizzazione di uno studentato composto da 10 alloggi universitari.')
