@@ -1,0 +1,111 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+}
+.switch_map {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch_map input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 12px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .2s;
+}
+
+input:checked + .slider {
+  background-color: #ff6666;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff6666;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#overlay {
+  position: absolute;
+  bottom: -70%;
+  
+  background: rgba(133,133,133,0.7);
+  padding: 5px;
+  width: 87px;
+  height: auto;
+  border-radius: 10px;
+  z-index: 500;
+}
+#overlay2 {
+  position: absolute;
+  bottom: -90%;
+  background: rgba(133,133,133,0.7);
+  padding: 5px;
+  width: 87px;
+  height: auto;
+  border-radius: 10px;
+  z-index: 500;
+}
+/* necessary to correctly displayng the map */
+#mapid {
+        width: 100vm;
+        height: 100vh;
+        z-index: 100;
+      }
+.leaflet-popup-content-wrapper{
+  width:240px;
+  height: 335px;
+  border-radius: 3px;
+}
+.leaflet-popup-content{
+  width:240px;
+  height: 330px;
+  margin: 4px;
+}
