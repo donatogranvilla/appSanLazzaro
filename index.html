@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+<link href="img/favicon.png" rel="icon">
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+	rel="stylesheet">
+
+<!-- Bootstrap CSS File -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Libraries CSS Files -->
+<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- map references -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <!-- put this after leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/map-style.css" />
+
+
+</head>
+
+<body>
+
+	<header id="header">
+		<div class="container">
+
+			<nav id="nav-menu-container">
+				<ul class="nav-menu">
+					<li class="menu-active"><a href="index.html">Home</a></li>
+					<li><a href="news.php">News</a></li>
+					<li><a href="cabreo.html">Cabreo</a></li>
+					<li><a
+						href="https://www.ausl.re.it/biblioteca-scientifica-carlo-livi">Sito
+							Istituzionale</a></li>
+
+						<li class="menu-has-children"><a href="padiglioni.html">Padiglioni</a>
+						<ul>
+							<li><a href="bertolani.html">Bertolani</a></li>
+							<li><a href="besta.html">Besta</a></li>
+							<!--  
+							<li class="menu-has-children"><a href="#">Morselli</a>
+								 
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul></li>
+								-->
+							<li><a href="buccola.html">Buccola</a></li>
+							<li><a href="desanctis.html">De Sanctis</a></li>
+							<li><a href="domaggio.html">Domaggio</a></li>
+							<li><a href="golgi.html">Golgi</a></li>
+							<li><a href="livi.html">Livi</a></li>
+							<li><a href="lombroso.html">Lombroso</a></li>
+							<li><a href="morselli.html">Morselli</a></li>
+							<li><a href="tamburini.html">Tamburini</a></li>
+							<li><a href="tanzi.html">Tanzi</a></li>
+							<li><a href="villamarchi.html">Villa Marchi</a></li>
+							<li><a href="villarossi.html">Villa Rossi</a></li>
+							<li><a href="ziccardi.html">Ziccardi</a></li>
+						</ul></li>
+					<li class="menu-has-children"><a href="parco.html">Il
+							Parco</a>
+						<ul>
+							<li><a href="parcolastoria.html">La Storia</a></li>
+							<li><a href="attrezzi.html">Sport</a></li></li>
+
+
+				</ul>
+				<li><a href="itinerari.html">Itinerari</a></li> <br
+					class="solomobile"> <br class="solomobile">
+
+				<li><a href="contatti.html">Contatti</a></li>
+				<button class="buttonlogin"
+					onclick="window.location.href='login.html'" style="width: auto;">Login</button>
+
+					<div class="socialcentrati solomobile ">
+						<a href="https://www.facebook.com/livicarlo/"
+							class="fa fa-facebook facebookmenu"></a> <a
+							href="https://www.youtube.com/channel/UC6PtGmvhd8eyY6S4xM5gKvQ"
+							class="fa fa-youtube youtubemenu"></a> <a
+							href="https://instagram.com/bibliotecalivi?igshid=12imk6h7q5i5v"
+							class="fa fa-instagram instagrammenu"></a>
+					</div>
+
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+
+	<section id="hero">
+		<div class="hero-container">
+
+			<img src="img/logo_sanlazzaro_giallo.png"style="width:20%; heigth:5%">
+			
+            <button onclick="scrollWin()" id="map-scroll-button"><span>VAI ALLA MAPPA!</span></button><br><br>
+
+		</div>
+	</section>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+	<!-- JavaScript Libraries -->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery-migrate.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/wow/wow.min.js"></script>
+	<script src="lib/waypoints/waypoints.min.js"></script>
+	<script src="lib/counterup/counterup.min.js"></script>
+	<script src="lib/superfish/hoverIntent.js"></script>
+	<script src="lib/superfish/superfish.min.js"></script>
+
+	<!-- Contact Form JavaScript File -->
+	<script src="contactform/contactform.js"></script>
+
+	<!-- Template Main Javascript File -->
+	<script src="js/main.js"></script>
+
+	<!-- posizionamento mappa -->
+
+    <div id="mapid"></div>
+
+    <div class="container-fluid" id="overlay">
+      <h6>1821-1877</h6>
+      <label onchange="funz1()" class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <h6>1878-1907</h6>
+      <label onchange="funz2()" class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <h6>1908-1928</h6>
+      <label onchange="funz3()" class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <h6>1929-1950</h6>
+      <label onchange="funz4()" class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <h6>1951-1990</h6>
+      <label onchange="funz5()" class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="container-fluid" id="overlay2">
+      <h6>Mappa antica</h6>
+      <label onchange="funz_map()" class="switch_map">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <script>
+    
+      function scrollWin() {
+       //window.scrollBy(0, 10000);
+       window.scrollTo({
+       top: 2000,
+       behavior: 'smooth'
+       });      
+      }
+    
+      //creazione variabile mappa
+      
+      var bounds= [
+        [44.696125, 10.654650],
+        [44.683593, 10.672228]
+        ];
+      
+      var mappa = L.map("mapid", {
+        zoomControl: false,
+        minZoom: 16,
+        maxZoom: 20,
+        trackResize: true,
+        dragging: true,
+        touchZoom: true,
+        maxBounds: bounds
+      }).setView([44.688412, 10.664783], 18);
+
+      //aggiunta tile layer da mapbox ed impostazione zoom
+      L.tileLayer(
+        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZG9uYXRvZ3JhbnZpbGxhIiwiYSI6ImNrOXpxaXB0czBhM2szZXBlZ3o3NGlwc3cifQ.ACd4RtDALrTbVDorMBoiKA",
+        {
+          attribution:
+            'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery ? <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 22,
+          id: "mapbox/streets-v11",
+          tileSize: 512,
+          zoomOffset: -1,
+          accessToken: "your.mapbox.access.token"
+        }
+      ).addTo(mappa);
+      //funzione per assegnare un colore alle feature in base al valore "fase" contenuto nelle properties
+      //nel file geojson ogni feature ha una proprietà chiamata fase che indica il periodo in cui l'edificio
+      //in questione è stato costruito; ad ogni fase corrisponde un colore diverso
+      function getColor(f) {
+        return  f > 4
+                ? "#fc9272"
+                : f > 3
+                ? "#addd8e"
+                : f > 2
+                ? "#31a354"
+                : f > 1
+                ? "#43a2ca"
+                : f > 0
+                ? "#7fcdbb"
+                : "#FFEDA0";
+      }
+
+      //funzione che determina lo stile delle features in base alle loro proprietà;
+      //con l'opzione fillcolor richiamo la funzione getcolor e specifico il percorso del dato necessario
+      function style(feature) {
+        return {
+          fillColor: getColor(feature.properties.fase), //colore di riempimento
+          weight: 2,
+          opacity: 1,
+          color: "white", //colore di contorno
+          dashArray: 7,
+          lineCap: "round",
+          dashOffset: 3,
+          fillOpacity: 0.8
+        };
+      }
+      function empty_style(feature) {
+        return { 
+          color: "#d9d9d9",
+          weight: 2,
+          dashArray: 7,
+          lineCap: "round",
+          dashOffset: 3,
+          fillOpacity: 0.0
+        };
+      }
+
+      //creo un layer per ogni fase; con l'opzione filter divido gli edifici in 5 gruppi e ad ognuno corrisponderà uno stile diverso
+      //i dati vengono immediatamente aggiunti alla mappa
+      var Layer_0 = L.geoJSON(null, {
+        style: empty_style
+      })
+        .bindPopup(function(layer) {
+          return ('<img src="'+layer.feature.properties.img+'">'+' '+'<div class="linkIMG"><h6>scopri di più --> <a href="'+layer.feature.properties.link+'">'+layer.feature.properties.nome+'</a></h6></div>');
+        })
+        .addTo(mappa);
+
+      var Layer_1 = L.geoJSON(null, {
+        filter: function(feature, layer) {
+          return feature.properties.fase_1;
+        },
+        style: style
+      })
+        .bindPopup(function(layer) {
+          return ('<img src="'+layer.feature.properties.img+'">'+' '+'<div class="linkIMG"><h6>scopri di più --> <a href="'+layer.feature.properties.link+'">'+layer.feature.properties.nome+'</a></h6></div>');
+        })
+        .addTo(mappa);
+
+      var Layer_2 = L.geoJSON(null, {
+        filter: function(feature, layer) {
+          return feature.properties.fase_2;
+        },
+        style: style
+      })
+        .bindPopup(function(layer) {
+          return ('<img src="'+layer.feature.properties.img+'">'+' '+'<div class="linkIMG"><h6>scopri di più --> <a href="'+layer.feature.properties.link+'">'+layer.feature.properties.nome+'</a></h6></div>');
+        })
+        .addTo(mappa);
+
+      var Layer_3 = L.geoJSON(null, {
+        filter: function(feature, layer) {
+          return feature.properties.fase_3;
+        },
+        style: style
+      })
+        .bindPopup(function(layer) {
+          return ('<img src="'+layer.feature.properties.img+'">'+' '+'<div class="linkIMG"><h6>scopri di più --> <a href="'+layer.feature.properties.link+'">'+layer.feature.properties.nome+'</a></h6></div>');
+        })
+        .addTo(mappa);
+
+      var Layer_4 = L.geoJSON(null, {
+        filter: function(feature, layer) {
+          return feature.properties.fase_4;
+        },
+        style: style
+      })
+        .bindPopup(function(layer) {
+          return ('<img src="'+layer.feature.properties.img+'">'+' '+'<div class="linkIMG"><h6>scopri di più --> <a href="'+layer.feature.properties.link+'">'+layer.feature.properties.nome+'</a></h6></div>');
+        })
+        .addTo(mappa);
+
+      var Layer_5 = L.geoJSON(null, {
+        filter: function(feature, layer) {
+          return feature.properties.fase_5;
+        },
+        style: style
+      })
+        .bindPopup(function(layer) {
+          return ('<img src="'+layer.feature.properties.img+'">'+' '+'<div class="linkIMG"><h6>scopri di più --> <a href="'+layer.feature.properties.link+'">'+layer.feature.properties.nome+'</a></h6></div>');
+        })
+        .addTo(mappa);
+
+      mappa.removeLayer(Layer_1);
+      mappa.removeLayer(Layer_2);
+      mappa.removeLayer(Layer_3);
+      mappa.removeLayer(Layer_4);
+      mappa.removeLayer(Layer_5);
+
+      //inizializzo 5 variabili che determinano lo stato (vero o falso) della presenza del layer sulla mappa
+      status_1 = false;
+      status_2 = false;
+      status_3 = false;
+      status_4 = false;
+      status_5 = false;
+      status_map = false;
+
+      function funz_map() {
+        status_map = !status_map;
+        if (status_map) {
+          mappa.addLayer(overlay);
+        } else mappa.removeLayer(overlay);
+        if (status_map) {
+          //con questo if evito di mostrare il layer di tutti gli edifici (quello iniziale) di modo che la mappa storica risulti visivamente pulita
+          mappa.removeLayer(Layer_0);
+        } else mappa.addLayer(Layer_0)
+        ;
+      }
+      function funz1() {
+        status_1 = !status_1;
+        if (status_1) {
+          mappa.addLayer(Layer_1);
+        } else mappa.removeLayer(Layer_1);
+      }
+      function funz2() {
+        status_2 = !status_2;
+        if (status_2) {
+          mappa.addLayer(Layer_2);
+        } else mappa.removeLayer(Layer_2);
+      }
+      function funz3() {
+        status_3 = !status_3;
+        if (status_3) {
+          mappa.addLayer(Layer_3);
+        } else mappa.removeLayer(Layer_3);
+      }
+      function funz4() {
+        status_4 = !status_4;
+        if (status_4) {
+          mappa.addLayer(Layer_4);
+        } else mappa.removeLayer(Layer_4);
+      }
+      function funz5() {
+        status_5 = !status_5;
+        if (status_5) {
+          mappa.addLayer(Layer_5);
+        } else mappa.removeLayer(Layer_5);
+      }
+      console.log(status);
+
+      //richiamo dati geojson async+fetch e li carico con il metodo adData
+      const request = async () => {
+        const response = await fetch("data.geojson");
+        var json = await response.json();
+        Layer_0.addData(json);
+        Layer_1.addData(json);
+        Layer_2.addData(json);
+        Layer_3.addData(json);
+        Layer_4.addData(json);
+        Layer_5.addData(json);
+      };
+      request();
+      //  mappa.addLayer(Layer_1);
+      //  function funz1(){
+      //  if(id == 1){
+      //    Layer_1.addTo(mappa);
+      //  };
+      //  if(id == 2){
+      //    Layer_2.addTo(mappa);
+      //  };
+      //  if(id == 3){
+      //    Layer_3.addTo(mappa);
+      //  }
+
+      //  };
+
+      //aggiungo una mappa in formato png in overlay
+     // var map_1900 = #
+      imageBounds = [[44.68012864, 10.65233192], [44.69617419, 10.67836115]];
+      var overlay = L.imageOverlay("img/mappa_antica.png", imageBounds);
+      overlay.setOpacity(1).addTo(mappa);
+      mappa.removeLayer(overlay);
+    </script>
+  </body>
+
+
+</html>

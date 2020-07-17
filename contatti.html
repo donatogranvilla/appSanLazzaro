@@ -1,0 +1,228 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contatti</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+<!-- Favicons -->
+<link href="img/favicon.png" rel="icon">
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+	rel="stylesheet">
+
+<!-- Bootstrap CSS File -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Libraries CSS Files -->
+<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+<script>
+function verificaEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function controlloForm() {
+  var cnome = document.forms["formmail"]["nome"].value;
+  var ccognome = document.forms["formmail"]["cognome"].value;
+  var cmail = document.forms["formmail"]["mail"].value;
+  var ctel = document.forms["formmail"]["telefono"].value;
+  var cmsg = document.forms["formmail"]["messaggio"].value;
+
+  if (cnome == "" || ccognome == "" ||  cmail == "" || cmsg == "" || ctel == "") {
+    alert("Attenzione: I campi Nome, Email e Messaggio sono obbligatori!");
+    return false;
+  }
+  else if (verificaEmail(cmail) !== true) {
+    alert("L'indirizzo email risulta essere corretto!");
+    return false;  
+  }else{
+    return true;
+  }
+}
+</script>
+<body>
+
+<header id="header">
+		<div class="container">
+
+			<nav id="nav-menu-container">
+				<ul class="nav-menu">
+					<li class="menu-active"><a href="index.html">Home</a></li>
+					<li><a href="news.php">News</a></li>
+					<li><a href="cabreo.html">Cabreo</a></li>
+					<li><a
+						href="https://www.ausl.re.it/biblioteca-scientifica-carlo-livi">Sito
+							Istituzionale</a></li>
+
+					<li class="menu-has-children"><a href="padiglioni.html">Padiglioni</a>
+						<ul>
+							<li><a href="bertolani.html">Bertolani</a></li>
+							<li><a href="besta.html">Besta</a></li>
+							<!--  
+							<li class="menu-has-children"><a href="#">Morselli</a>
+								 
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul></li>
+								-->
+							<li><a href="buccola.html">Buccola</a></li>
+							<li><a href="desanctis.html">De Sanctis</a></li>
+							<li><a href="golgi.html">Golgi</a></li>
+							<li><a href="livi.html">Livi</a></li>
+							<li><a href="lombroso.html">Lombroso</a></li>
+							<li><a href="morselli.html">Morselli</a></li>
+							<li><a href="tamburini.html">Tamburini</a></li>
+							<li><a href="tanzi.html">Tanzi</a></li>
+							<li><a href="villamarchi.html">Villa Marchi</a></li>
+							<li><a href="villarossi.html">Villa Rossi</a></li>
+							<li><a href="ziccardi.html">Ziccardi</a></li>
+						</ul></li>
+					<li class="menu-has-children"><a href="parco.html">Il Parco</a>
+						<ul>
+							<li><a href="parcolastoria.html">La Storia</a></li>
+							<li><a href="attrezzi.html">Sport</a></li>
+
+						</ul></li>
+
+					<br class="solomobile">
+					<br class="solomobile">
+						<li><a href="itinerari.html">Itinerari</a></li>
+					<li><a href="contatti.html">Contatti</a></li>
+					<button class="buttonlogin"
+						onclick="window.location.href='login.html'" style="width: auto;">Login</button>
+
+
+					<div class="socialcentrati solomobile ">
+						<a href="https://www.facebook.com/livicarlo/"
+							class="fa fa-facebook facebookmenu"></a> <a
+							href="https://www.youtube.com/channel/UC6PtGmvhd8eyY6S4xM5gKvQ"
+							class="fa fa-youtube youtubemenu"></a> <a
+							href="https://instagram.com/bibliotecalivi?igshid=12imk6h7q5i5v"
+							class="fa fa-instagram instagrammenu"></a>
+					</div>
+
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+
+
+	<section id="hero">
+		<div class="hero-container">
+			<h2 class="section-title" style="margin-top: 10%; color:#ffff00">Contattaci!</h2>
+			<form name="formmail" method="post" onsubmit="return controlloForm()" action="Invio_Contatti.php" onsubmit="return controlloForm()">
+				<div class="row">
+
+          <input type="hidden" name="successo" value="index.html">
+
+					 <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
+						style="width: 35%; margin-left: 15%; background-color: transparent; color: #ffffff">
+					 <input type="text" class="form-control" id="cognome" name="cognome" placeholder="Cognome"
+						style="width: 35%; background-color: transparent; color: #ffffff">
+
+				</div>
+
+
+				<div class="row">
+
+					<input type="email" id="mail" name="mail" class="form-control"
+						placeholder="Email"
+						style="width: 35%; margin-left: 15%; background-color: transparent; color: #ffffff">
+					<input type="text" id="telefono" name="telefono"
+						class="form-control" 	placeholder="Telefono"
+						style="width: 35%; background-color: transparent; color: #ffffff">
+
+				</div>
+
+
+				<div class="row">
+
+					<textarea id="messaggio" name="messaggio" placeholder="Scrivi il tuo messaggio" class="form-control" rows="2"
+						style="width: 50%; margin-left: 15%; background-color: transparent; color: #ffffff"></textarea>
+	
+
+					<button id="contact-submit" class="btn custom-btn col-xs-12"
+						type="submit" name="submit"
+						style="width: 20%;background-color: transparent; border-color: white">
+						<i class="fa fa-rocket" style="color: #ffffff"></i>
+					</button>
+
+
+				</div>
+				<div class="contact-message"></div>
+
+			</form>
+			<h2 style="margin-top: 2%; color: #ffff00">Come contattarci</h2>
+			<div class="row">
+				<div style="color: #000080">
+					<i class="fa fa-map-marker" style="color: #ffff00"></i> Via G.Amendola 2 (RE)
+				</div>
+			</div>
+
+			<div class="row" style="">
+				<div style="color: #000080">
+					<i class="fa fa-envelope" style="color: #ffff00"></i> biblioteca@ausl.re.it
+				</div>
+			</div>
+
+			<div class="row" style="">
+				<div style="color: #000080">
+					<i class="fa fa-phone" style="color: #ffff00"></i> 0522 335280
+				</div>
+			</div>
+
+			<div class="social-btn-container">
+				<span class="social-btn-box"> 
+					<a href="https://www.facebook.com/livicarlo/" class="facebook-btn">
+						<i class="fa fa-facebook" style="margin-top:22px;"></i></a>
+				
+				</span> <span class="social-btn-box"> 
+					<a href="https://www.youtube.com/channel/UC6PtGmvhd8eyY6S4xM5gKvQ"
+					class="youtube-btn"><i class="fa fa-youtube" style="margin-top:22px;"></i></a>
+				</span>
+				<span class="social-btn-box">
+					<a href="https://instagram.com/bibliotecalivi?igshid=12imk6h7q5i5v"
+					class="instagram-btn"><i class="fa fa-instagram" style="margin-top:22px;"></i></a>
+				</span>
+			</div>
+		</div>
+
+	</section>
+
+
+	<!-- JavaScript Libraries -->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery-migrate.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/wow/wow.min.js"></script>
+	<script src="lib/waypoints/waypoints.min.js"></script>
+	<script src="lib/counterup/counterup.min.js"></script>
+	<script src="lib/superfish/hoverIntent.js"></script>
+	<script src="lib/superfish/superfish.min.js"></script>
+
+	<!-- Contact Form JavaScript File -->
+	<script src="contactform/contactform.js"></script>
+
+	<!-- Template Main Javascript File -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
